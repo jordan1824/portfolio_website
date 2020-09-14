@@ -3,10 +3,66 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Jordan Deveau | Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-  
+  <nav class='navbar'>
+    <ul class='navbar-link-list'>
+      <li class='navbar-item'><button class='nav-btn'>About</button></li>
+      <li class='navbar-item'><button class='nav-btn'>Projects</button></li>
+      <li class='navbar-item'><button class='nav-btn'>Contact</button></li>
+      <li><button class='btn btn--header'>Get In Touch</button></li>
+    </ul>
+  </nav>
+  <section class='hero-banner'>
+    <div class='hero-banner__container'>
+      <h1 class='hero-banner__heading'>Jordan Deveau</h1>
+      <h2 class='hero-banner__sub-heading'>Full Stack Web Developer</h2>
+    </div>
+      <div class='hero-banner__learn-more'>
+        <p class='hero-banner__learn-more-text'>Learn More About Me</p>
+        <div class='hero-banner__learn-more-arrow'><i class="fa fa-long-arrow-down" aria-hidden="true"></i></div>
+      </div>
+  </section>
+  <section class='about'>
+    <h1 class='about__heading'>ABOUT</h1>
+    <div class='about__skills-container'>
+      <div class='about__skill'>
+        <h2 class='about__skill-image'></h2>
+        <h3 class='about__skill-title'></h3>
+        <p class='about__skill-content'></p>
+      </div>
+      <div class='about__skill'>
+        <h2 class='about__skill-image'></h2>
+        <h3 class='about__skill-title'></h3>
+        <p class='about__skill-content'></p>
+      </div>
+      <div class='about__skill'>
+        <h2 class='about__skill-image'></h2>
+        <h3 class='about__skill-title'></h3>
+        <p class='about__skill-content'></p>
+      </div>
+      <div class='about__skill'>
+        <h2 class='about__skill-image'></h2>
+        <h3 class='about__skill-title'></h3>
+        <p class='about__skill-content'></p>
+      </div>
+    </div>
+  </section>
+  <section class='contact'>
+    <h1 class='contact__heading'>CONTACT</h1>
+    <p class='contact__text'>Fill out the form below to get in contact with me!</p>
+    <form class='contact__form'>
+      <input class='contact__form-input' type="text" name="name" placeholder="Enter name">
+      <input class='contact__form-input' type="text" name="email" placeholder="Enter email">
+      <textarea class='contact__form-textarea' type="text" name="message" placeholder="Your message"></textarea>
+      <button class='btn btn--contact' type="submit">Send Message</button>
+    </form>
+  </section>
+  <footer>
+    <p>Jordan Deveau &#169; 2020</p>
+  </footer>
 <script src='./bundled.js'></script>
 </body>
 </html>

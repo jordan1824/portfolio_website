@@ -1,0 +1,11 @@
+footer {
+  background: var(--dark-color);
+  padding: 75px 20px;
+  color: #DCC484;
+  text-align: center;
+  border-top: 2px solid var(--silver-color);
+}
+
+footer p {
+  color: var(--silver-color);
+}

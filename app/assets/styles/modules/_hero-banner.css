@@ -1,0 +1,46 @@
+.hero-banner {
+  background-color: var(--primary-color);
+  color: var(--silver-color);
+  height: 100vh;
+  position: relative;
+}
+
+.hero-banner__container {
+  position: absolute;
+  text-align: center;
+  left: 50%;
+  top: 45%;
+  transform: translate(-50%, -50%);
+  padding: 3rem 8rem 3.5rem;
+}
+
+.hero-banner__heading {
+  font-size: 4rem;
+  background: repeating-linear-gradient(180deg, #cfc09f 22%,#cfc09f 25%, #cfc09f 27%,#ffecb3 40%,#79550e 78%, #cfc09f 100%);
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  -moz-text-fill-color: transparent;
+}
+
+.hero-banner__sub-heading {
+  font-size: 1.5rem;
+}
+
+
+.hero-banner__learn-more {
+  position: absolute;
+  bottom: 2em;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.hero-banner__learn-more-text {
+  margin-bottom: 1em;
+}
+
+.hero-banner__learn-more-arrow {
+  font-size: 1.5rem;
+}

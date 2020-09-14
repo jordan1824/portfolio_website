@@ -1,0 +1,27 @@
+.about {
+  background: var(--dark-color);
+  padding: 100px 50px 400px;
+  color: var(--silver-color);
+  border-top: 2px solid var(--silver-color);
+  border-bottom: 2px solid var(--silver-color);
+}
+
+.about__heading {
+  color: var(--silver-color);
+  font-size: 2.3rem;
+  text-align: center;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.about__heading::after {
+  content: "";
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  border-radius: 20px;
+  background: var(--silver-color);
+}

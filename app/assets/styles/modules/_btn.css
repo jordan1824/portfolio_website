@@ -1,0 +1,22 @@
+.btn {
+  background: repeating-linear-gradient(45deg, #cfc09f 22%,#cfc09f 25%, #cfc09f 27%,#ffecb3 40%,#79550e 78%, #cfc09f 100%);
+  color: #503706;
+  background-size: 200%;
+  font-weight: 700;
+  padding: 0.8em 1.6em;
+  font-size: 1.1rem;
+  cursor: pointer;
+  outline: 3px solid var(--primary-color);
+  outline-offset: -6px;
+  border: none;
+}
+
+.btn--header {
+  position: absolute;
+  right: 60px;
+  margin-top: -10px;
+}
+
+.btn--contact {
+  margin-top: 30px;
+}
