@@ -1,14 +1,11 @@
 .btn {
-  background: repeating-linear-gradient(45deg, #cfc09f 22%,#cfc09f 25%, #cfc09f 27%,#ffecb3 40%,#79550e 78%, #cfc09f 100%);
-  color: #503706;
-  background-size: 200%;
-  font-weight: 700;
-  padding: 0.8em 1.6em;
-  font-size: 1.1rem;
+  background: var(--silver-color);
+  padding: 0.7em 1.2em;
+  font-size: 1rem;
   cursor: pointer;
-  outline: 3px solid var(--primary-color);
-  outline-offset: -6px;
   border: none;
+  color: var(--primary-color);
+  border-radius: 2px;
 }
 
 .btn--header {

@@ -1,0 +1,265 @@
+.projects {
+  background: var(--silver-color);
+}
+
+.project {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 20px;
+  justify-content: center;
+  width: 95%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 90px 0px;
+  color: rgb(130, 130, 130);
+}
+
+.project--dark {
+  background: #2E4662;
+}
+
+.projects__heading {
+  color: #2E4662;
+  font-size: 2.3rem;
+  text-align: center;
+  position: relative;
+  padding: 30px 0px 40px;
+  background: #E3E3E3;
+}
+
+.projects__heading::after {
+  content: "";
+  position: absolute;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 110px;
+  height: 5px;
+  border-radius: 20px;
+  background: #2E4662;
+}
+
+.project__image {
+  text-align: center;
+  height: 350px;
+  width: 100%;
+  margin: auto;
+}
+
+.project__image img {
+  height: 100%;
+  width: 100%;
+  transition: transform 0.8s;
+}
+
+.project__image img:hover {
+  transform: scale(1.05);
+}
+
+.project__name {
+  margin-bottom: 35px;
+  font-size: 2rem;
+}
+
+.project--dark .project__name {
+  color: var(--silver-color);
+}
+
+.project__info-container {
+  order: -1;
+  margin: auto;
+}
+
+.project__info-container-2 {
+  margin: auto;
+  color: var(--silver-color);
+}
+
+.project__info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 30px;
+}
+
+.project__title {
+  margin-bottom: 10px;
+}
+
+.project__content {
+  line-height: 1.5;
+}
+
+.project__notes-list {
+  list-style: initial;
+}
+
+.project__note {
+  list-style: initial;
+  margin-left: 30px;
+  margin-bottom: 7px;
+}
+
+.project__languages-title {
+  margin: 10px 0px;
+  font-size: 1.3rem;
+}
+
+.project__technology {
+  border: 1px solid rgb(130, 130, 130);
+  padding: 0.5em 1em;
+  color: rgb(130, 130, 130);
+  margin-bottom: 0.5em;
+  margin-right: 0.5em;
+}
+
+.project__technology:hover {
+  border-color: #2E4662;
+  color: var(--silver-color);
+  background: #2E4662;
+}
+
+.project__technology:focus {
+  outline: none;
+}
+
+.project--dark .project__technology {
+  border: 1px solid var(--silver-color);
+  background: #2E4662;
+  color: var(--silver-color);
+  padding: 0.5em 1em;
+  margin-bottom: 0.7em;
+}
+
+.project--dark .project__technology:hover {
+  border-color: var(--silver-color);
+  color: #2E4662;
+  background: var(--silver-color);
+}
+
+.project__link {
+  margin: 0px 10px;
+  position: relative;
+  top: 3px;
+  color: rgb(130, 130, 130);
+  transition: color 0.3s;
+}
+
+.project__link:hover {
+  color: #2E4662;
+}
+
+.project--dark .project__link {
+  color: var(--silver-color);
+}
+
+.project--dark .project__link:hover {
+  color: rgb(180, 180, 180);
+}
+
+@media (max-width: 1100px) {
+  .project {
+    display: block;
+    padding: 30px 0 40px;
+  }
+  .project__image {
+    width: 600px;
+    margin-bottom: 40px;
+  }
+  .project__name {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .project__info-container, .project__info-container-2 {
+    width: 60%;
+  }
+  .project__info {
+    grid-template-columns: 4fr 3fr;
+  }
+}
+
+@media (max-width: 880px) {
+  .project__info {
+    display: initial;
+    text-align: center;
+  }
+  .project__languages-title {
+    font-size: 24px;
+  }
+  .project__note {
+    text-align: left;
+    font-size: 0.9rem;
+  }
+  .project__notes {
+    margin-top: 30px;
+  }
+  .project__title {
+    margin-top: 10px;
+  }
+  .project__notes-list {
+    width: 60%;
+    margin: auto;
+  }
+}
+
+@media (max-width: 630px) {
+  .project__image {
+    width: 100%;
+    max-width: 400px;
+    height: 250px;
+  }
+  .project__info-container, .project__info-container-2 {
+    width: 90%;
+  }
+  .project__name {
+    font-size: 1.7rem;
+  }
+  .project__title, .project__languages-title {
+    font-size: 1.4rem;
+  }
+  .projects__heading {
+    font-size: 2.1rem;
+    padding: 20px 0px 30px;
+  }
+  .projects__heading::after {
+    top: 65px;
+    width: 100px;
+    height: 5px;
+  }
+}
+
+@media (max-width: 400px) {
+  .project__image {
+    height: 220px;
+  }
+  .project__info-container, .project__info-container-2 {
+    width: 95%;
+  }
+  .project__link {
+    display: block;
+    width: 55%;
+    margin: auto;
+    margin-top: 8px;
+    border-radius: 4px;
+    font-size: 1.4rem;
+    border: 1px solid grey;
+    padding: 8px 10px 5px;
+    color: grey !important;
+  }
+  .project__link::before {
+    content: "Visit Site";
+    color: grey;
+    display: inline-block;
+    font-size: 1.3rem;
+    margin-right: 8px;
+    position: relative;
+    top: -2px;
+    font-weight: 400;
+  }
+  .project--dark .project__link {
+    border: 1px solid var(--silver-color);
+    color: var(--silver-color) !important;
+  }
+  .project--dark .project__link::before {
+    color: var(--silver-color);
+  }
+}

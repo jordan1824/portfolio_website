@@ -7,12 +7,12 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-  <nav class='navbar'>
+  <nav class='navbar navbar--fixed'>
     <ul class='navbar-link-list'>
       <li class='navbar-item'><button class='nav-btn'>About</button></li>
+      <li class='navbar-item'><button class='nav-btn'>Skillset</button></li>
       <li class='navbar-item'><button class='nav-btn'>Projects</button></li>
       <li class='navbar-item'><button class='nav-btn'>Contact</button></li>
-      <li><button class='btn btn--header'>Get In Touch</button></li>
     </ul>
   </nav>
   <section class='hero-banner'>
@@ -20,38 +20,184 @@
       <h1 class='hero-banner__heading'>Jordan Deveau</h1>
       <h2 class='hero-banner__sub-heading'>Full Stack Web Developer</h2>
     </div>
-      <div class='hero-banner__learn-more'>
-        <p class='hero-banner__learn-more-text'>Learn More About Me</p>
-        <div class='hero-banner__learn-more-arrow'><i class="fa fa-long-arrow-down" aria-hidden="true"></i></div>
+      <div class='hero-banner__scroll'>
+        <span class="scroll-icon">
+          <span class="scroll-icon__wheel-outer">
+            <span class="scroll-icon__wheel-inner"></span>
+          </span>
+        </span>
       </div>
   </section>
   <section class='about'>
-    <h1 class='about__heading'>ABOUT</h1>
+    <div class='about__intro'>
+      <h2 class='about__intro-title'>About Me</h2>
+      <p class='about__intro-content'>Hi, I’m Jordan. I’m a full stack web developer that works primarily with HTML, CSS, JavaScript, Django, & Node.<br class='mobile-only'><br class='mobile-only'> I am naturally a very driven & ambitious individual, so I am always working to improve my skills, learn new languages, & become a better programmer.<br class='tablet-only'><br class='tablet-only'> I enjoy problem solving & working through to a solution. I have a deep fascination in coding & I’m inspired by its potential.<br class='mobile-only'><br class='mobile-only'> Coding is a huge passion of mine, and it's something that I strive to become better at each day.</p>
+    </div>
+  </section>
+  <section class='skills'>
+    <h1 class='skills__heading'>Skillset</h1>
     <div class='about__skills-container'>
       <div class='about__skill'>
-        <h2 class='about__skill-image'></h2>
-        <h3 class='about__skill-title'></h3>
-        <p class='about__skill-content'></p>
+        <h1 class='about__skill-image'><i class="fa fa-desktop" aria-hidden="true"></i></h1>
+        <h2 class='about__skill-title'>Frontend</h2>
+        <p class='about__skill-content'>I enjoy taking a design and determining the various components that will make it become a reality.</p>
+        <h3 class='skill-languages-title'>Languages & Technologies</h3>
+        <div class='skill-languages-container'>
+          <button class='skill-language'>HTML</button>
+          <button class='skill-language'>CSS</button>
+          <button class='skill-language'>JavaScript</button>
+          <button class='skill-language'>React</button>
+          <button class='skill-language'>Bootstrap</button>
+          <button class='skill-language'>BEM</button>
+        </div>
       </div>
       <div class='about__skill'>
-        <h2 class='about__skill-image'></h2>
-        <h3 class='about__skill-title'></h3>
-        <p class='about__skill-content'></p>
+        <h1 class='about__skill-image'><i class="fa fa-code" aria-hidden="true"></i></h1>
+        <h2 class='about__skill-title'>Backend</h2>
+        <p class='about__skill-content'>I enjoy building out a project from start to end, & figuring out how to create the desired result.</p>
+        <h3 class='skill-languages-title'>Frameworks & Technologies</h3>
+        <div class='skill-languages-container'>
+          <button class='skill-language'>Node</button>
+          <button class='skill-language'>Django</button>
+          <button class='skill-language'>Flask</button>
+          <button class='skill-language'>MongoDB</button>
+          <button class='skill-language'>Webpack</button>
+          <button class='skill-language'>SQL</button>
+          <button class='skill-language'>Git</button>
+        </div>
       </div>
       <div class='about__skill'>
-        <h2 class='about__skill-image'></h2>
-        <h3 class='about__skill-title'></h3>
-        <p class='about__skill-content'></p>
+        <h1 class='about__skill-image'><i class="fa fa-magic" aria-hidden="true"></i></h1>
+        <h2 class='about__skill-title'>Design</h2>
+        <p class='about__skill-content'>With over 2 years experience in eCommerce, I feel I have developed a good sense for website design.</p>
+        <div class='last-skill-container'>
+          <h3 class='skill-languages-title'>Tools & Technologies</h3>
+          <div class='skill-languages-container'>
+            <button class='skill-language'>Photoshop</button>
+            <button class='skill-language'>Premiere Pro</button>
+            <button class='skill-language'>Canva</button>
+          </div>
+        </div>
       </div>
-      <div class='about__skill'>
-        <h2 class='about__skill-image'></h2>
-        <h3 class='about__skill-title'></h3>
-        <p class='about__skill-content'></p>
+    </div>
+  </section>
+  <section class='projects'>
+    <h1 class='projects__heading'>Projects</h1>
+    <div class='project'>
+      <div class='project__image'>
+        <a href="#"><img src="https://chippd.github.io/img/jobbie1.png" alt="project-image"></a>
+      </div>
+      <div class='project__info-container'>
+        <h1 class='project__name'>Photo Sharing App <a class='project__link' href="#"><i class="fa fa-external-link" aria-hidden="true"></i></a></h1>
+        <div class='project__info'>
+          <div class='project__summary'>
+            <h2 class='project__title'>Summary</h2>
+            <p class='project__content'>An Instagram-like web application that utilizes vanilla javascript to deliver a very responsive & interactive user experience.</p>
+            <h2 class='project__languages-title'>Technologies:</h2>
+            <div class='project__technologies'>
+              <button class='project__technology'>HTML</button>
+              <button class='project__technology'>CSS</button>
+              <button class='project__technology'>JavaScript</button>
+              <button class='project__technology'>Django</button>
+              <button class='project__technology'>Git</button>
+              <button class='project__technology'>Bootstrap</button>
+            </div>
+          </div>
+          <div class='project_notes'>
+            <h2 class='project__title'>Features:</h2>
+            <ul class='project__notes-list'>
+              <li class='project__note'>CRUD Operations</li>
+              <li class='project__note'>User Authentication</li>
+              <li class='project__note'>Asynchronous Search Results</li>
+              <li class='project__note'>Client-side Rendering</li>
+              <li class='project__note'>Infinite Scroll</li>
+              <li class='project__note'>Follow Functionality</li>
+              <li class='project__note'>Like Post Functionality</li>
+              <li class='project__note'>Fully Responsive Design</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class='project--dark'>
+      <div class='project'>
+        <div class='project__image'>
+          <a href="#"><img src="https://chippd.github.io/img/jobbie1.png" alt="project-image"></a>
+        </div>
+        <div class='project__info-container-2'>
+          <h1 class='project__name'>Social Sharing App <a class='project__link' href="#"><i class="fa fa-external-link" aria-hidden="true"></i></a></h1>
+          <div class='project__info'>
+            <div class='project__summary'>
+              <h2 class='project__title'>Summary</h2>
+              <p class='project__content'>A web app that mimics reddit's discussion platform, where users can share & discuss topics of interest, with additional Facebook-like features to enhance user experience.</p>
+              <h2 class='project__languages-title'>Technologies:</h2>
+              <div class='project__technologies'>
+                <button class='project__technology'>HTML</button>
+                <button class='project__technology'>CSS</button>
+                <button class='project__technology'>JavaScript</button>
+                <button class='project__technology'>Django</button>
+                <button class='project__technology'>Git</button>
+                <button class='project__technology'>Bootstrap</button>
+              </div>
+            </div>
+            <div class='project_notes'>
+              <h2 class='project__title'>Features:</h2>
+              <ul class='project__notes-list'>
+                <li class='project__note'>CRUD Operations</li>
+                <li class='project__note'>User Authentication</li>
+                <li class='project__note'>Post Comments</li>
+                <li class='project__note'>Password Reset</li>
+                <li class='project__note'>User & Post Search</li>
+                <li class='project__note'>Save Post Functionality</li>
+                <li class='project__note'>Utilizes Pagination</li>
+                <li class='project__note'>Live Form Validation</li>
+                <li class='project__note'>Fully Responsive Design</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class='project'>
+      <div class='project__image'>
+        <a href="#"><img src="https://chippd.github.io/img/jobbie1.png" alt="project-image"></a>
+      </div>
+      <div class='project__info-container'>
+        <h1 class='project__name'>Task App <a class='project__link' href="#"><i class="fa fa-external-link" aria-hidden="true"></i></a></h1>
+        <div class='project__info'>
+          <div class='project__summary'>
+            <h2 class='project__title'>Summary</h2>
+            <p class='project__content'>A simple task app that utilizes node JS & various JavaScript utilities to demonstrate my ability working with these technologies.</p>
+            <h2 class='project__languages-title'>Technologies:</h2>
+            <div class='project__technologies'>
+              <button class='project__technology'>HTML</button>
+              <button class='project__technology'>CSS</button>
+              <button class='project__technology'>JavaScript</button>
+              <button class='project__technology'>Node</button>
+              <button class='project__technology'>MongoDB</button>
+              <button class='project__technology'>Git</button>
+              <button class='project__technology'>Webpack</button>
+            </div>
+          </div>
+          <div class='project_notes'>
+            <h2 class='project__title'>Features:</h2>
+            <ul class='project__notes-list'>
+              <li class='project__note'>Asynchronous CRUD Operations</li>
+              <li class='project__note'>User Authentication</li>
+              <li class='project__note'>Live Form Validation</li>
+              <li class='project__note'>Server-side Input Validation</li>
+              <li class='project__note'>Flash Messages</li>
+              <li class='project__note'>Fully Responsive Design</li>
+              <li class='project__note'>Utilizes MVC Backend Framework</li>
+              <li class='project__note'>Utilizes Express Server Application</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   </section>
   <section class='contact'>
-    <h1 class='contact__heading'>CONTACT</h1>
+    <h1 class='contact__heading'>Contact</h1>
     <p class='contact__text'>Fill out the form below to get in contact with me!</p>
     <form class='contact__form'>
       <input class='contact__form-input' type="text" name="name" placeholder="Enter name">
@@ -60,8 +206,9 @@
       <button class='btn btn--contact' type="submit">Send Message</button>
     </form>
   </section>
+  <hr class='footer-hr'>
   <footer>
-    <p>Jordan Deveau &#169; 2020</p>
+    <p>Code available on <a class='link' href="https://github.com/jordan1824?tab=repositories">Github</a></p>
   </footer>
 <script src='./bundled.js'></script>
 </body>

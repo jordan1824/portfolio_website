@@ -1,5 +1,7 @@
 .hero-banner {
-  background-color: var(--primary-color);
+  background-image: linear-gradient(to right, var(--primary-color), var(--primary-color) 50%, #2E4662 50%, #2E4662);
+  background-size: cover;
+  background-repeat: no-repeat;
   color: var(--silver-color);
   height: 100vh;
   position: relative;
@@ -11,36 +13,63 @@
   left: 50%;
   top: 45%;
   transform: translate(-50%, -50%);
-  padding: 3rem 8rem 3.5rem;
 }
 
 .hero-banner__heading {
   font-size: 4rem;
-  background: repeating-linear-gradient(180deg, #cfc09f 22%,#cfc09f 25%, #cfc09f 27%,#ffecb3 40%,#79550e 78%, #cfc09f 100%);
-  background-size: 200%;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -webkit-text-fill-color: transparent; 
-  -moz-text-fill-color: transparent;
+  color: white;
+  position: relative;
+  left: 4px;
 }
 
 .hero-banner__sub-heading {
   font-size: 1.5rem;
+  color: var(--secondary-color);
 }
 
+/* Scroll Icon */
 
-.hero-banner__learn-more {
+.hero-banner__scroll {
   position: absolute;
-  bottom: 2em;
   left: 50%;
-  transform: translateX(-50%);
-  text-align: center;
+  transform: translate(-50%, -10%);
+  bottom: 20px;
+  animation: scroll 0.8s infinite alternate;
+  animation-timing-function: ease;
 }
 
-.hero-banner__learn-more-text {
-  margin-bottom: 1em;
+.scroll-icon__wheel-outer {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: .6em;
+  height: 0.6em;
+  width: 0.4em;
+  margin-left: -.2em;
+  border-radius: .4em;
+  overflow: hidden;
+  transform: scale(0.8);
 }
 
-.hero-banner__learn-more-arrow {
-  font-size: 1.5rem;
+.scroll-icon__wheel-inner {
+  display: block;
+  height: 100%;
+  width: 100%;
+  border-radius: inherit;
+  background: #FFF;
+}
+
+.scroll-icon {
+  display: block;
+  position: relative;
+  height: 3em;
+  width: 1.8em;
+  border: 2px solid #fff;
+  background: transparent;
+  border-radius: 1em;
+}
+
+@keyframes scroll {
+  0% {transform: translate(-50%, -20%)}
+  100% {opacity: 1; transform: translate(-50%, 10%)}
 }
