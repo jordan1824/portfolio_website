@@ -9,7 +9,6 @@
   display: flex;
   color: var(--silver-color);
   justify-content: center;
-  flex-wrap: wrap;
 }
 
 .navbar-item {
@@ -20,11 +19,12 @@
   background: none;
   border: none;
   font-size: 1.1rem;
-  padding: 0px 10px;
+  padding: 0px 10px 20px;
   color: var(--silver-color);
   cursor: pointer;
   position: relative;
   transition: color 0.3s;
+  text-decoration: none;
 }
 
 .nav-btn::after {
@@ -41,4 +41,23 @@
 
 .nav-btn:hover::after {
   transform: translateX(-50%) scaleX(1);
+}
+
+
+@media (max-width: 550px) {
+  .navbar-link-list {
+    justify-content: space-around;
+  }
+  .navbar-item {
+    margin: 0px 5px;
+  }
+  .nav-btn {
+    font-size: 1.05rem;
+  }
+}
+
+@media (max-width: 490px) {
+  .navbar {
+    display: none;
+  }
 }

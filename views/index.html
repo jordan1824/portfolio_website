@@ -9,18 +9,17 @@
 <body>
   <nav class='navbar navbar--fixed'>
     <ul class='navbar-link-list'>
-      <li class='navbar-item'><a href='#about' class='nav-btn'>About</a></li>
-      <li class='navbar-item'><a href='#skills' class='nav-btn'>Skillset</a></li>
-      <li class='navbar-item'><a href='#projects' class='nav-btn'>Projects</a></li>
-      <li class='navbar-item'><a href='#contact' class='nav-btn'>Contact</a></li>
+      <li class='navbar-item'><button class='nav-btn'>About</button></li>
+      <li class='navbar-item'><button class='nav-btn'>Skillset</button></li>
+      <li class='navbar-item'><button class='nav-btn'>Projects</button></li>
+      <li class='navbar-item'><button class='nav-btn'>Contact</button></li>
     </ul>
   </nav>
   <section class='hero-banner'>
-    <div class='hero-banner-outer-container'>
-      <div class='hero-banner__container'>
-        <h1 class='hero-banner__heading'>Jordan Deveau</h1>
-        <h2 class='hero-banner__sub-heading'>Full Stack Web Developer</h2>
-      </div>
+    <div class='hero-banner__container'>
+      <h1 class='hero-banner__heading'>Jordan Deveau</h1>
+      <h2 class='hero-banner__sub-heading'>Full Stack Web Developer</h2>
+    </div>
       <div class='hero-banner__scroll'>
         <span class="scroll-icon">
           <span class="scroll-icon__wheel-outer">
@@ -28,15 +27,14 @@
           </span>
         </span>
       </div>
-    </div>
   </section>
-  <section class='about' id="about">
+  <section class='about'>
     <div class='about__intro'>
       <h2 class='about__intro-title'>About Me</h2>
       <p class='about__intro-content'>Hi, I’m Jordan. I’m a full stack web developer that works primarily with HTML, CSS, JavaScript, Django, & Node.<br class='mobile-only'><br class='mobile-only'> I am naturally a very driven & ambitious individual, so I am always working to improve my skills, learn new languages, & become a better programmer.<br class='tablet-only'><br class='tablet-only'> I enjoy problem solving & working through to a solution. I have a deep fascination in coding & I’m inspired by its potential.<br class='mobile-only'><br class='mobile-only'> Coding is a huge passion of mine, and it's something that I strive to become better at each day.</p>
     </div>
   </section>
-  <section class='skills' id="skills">
+  <section class='skills'>
     <h1 class='skills__heading'>Skillset</h1>
     <div class='about__skills-container'>
       <div class='about__skill'>
@@ -83,7 +81,7 @@
       </div>
     </div>
   </section>
-  <section class='projects' id="projects">
+  <section class='projects'>
     <h1 class='projects__heading'>Projects</h1>
     <div class='project'>
       <div class='project__image'>
@@ -198,22 +196,39 @@
       </div>
     </div>
   </section>
-  <section class='contact' id="contact">
+  <section class='contact'>
     <h1 class='contact__heading'>Contact</h1>
-    <div class='contact-outer-container'>
-      <p class='contact__text'>Fill out the form below to get in contact with me!</p>
-      <form class='contact__form'>
-        <input class='contact__form-input' type="text" name="name" placeholder="Enter name">
-        <input class='contact__form-input' type="text" name="email" placeholder="Enter email">
-        <textarea class='contact__form-textarea' type="text" name="message" placeholder="Your message"></textarea>
-        <button class='btn btn--contact' type="submit">Send Message</button>
-      </form>
-    </div>
+    <p class='contact__text'>Fill out the form below to get in contact with me!</p>
+    <form class='contact__form'>
+      <input class='contact__form-input' id='subject' type="text" name="subject" placeholder="Enter subject">
+      <input class='contact__form-input' id='email' type="email" name="email" placeholder="Enter email">
+      <textarea class='contact__form-textarea' id='text' type="text" name="message" placeholder="Your message"></textarea>
+      <button class='btn btn--contact' type="submit">Send Message</button>
+    </form>
   </section>
   <hr class='footer-hr'>
   <footer>
     <p>Code available on <a class='link' href="https://github.com/jordan1824?tab=repositories" target="_blank">Github</a></p>
   </footer>
-<script src='./bundled.js'></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+  $('form').on('submit', (e) => {
+    e.preventDefault();
+
+    const subject = $('#subject').val().trim();
+    const email = $('#email').val().trim();
+    const text = $('#text').val().trim();
+
+    const data = {
+      email,
+      subject,
+      text
+    };
+
+    $.post('/email', data, function() {
+      console.log("Server received our data")
+    });
+  });
+</script>
 </body>
 </html>

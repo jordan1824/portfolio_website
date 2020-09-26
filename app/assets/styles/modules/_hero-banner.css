@@ -1,5 +1,5 @@
 .hero-banner {
-  background-image: linear-gradient(to right, var(--primary-color), var(--primary-color) 50%, #2E4662 50%, #2E4662);
+  background-color: #2E4662;
   background-size: cover;
   background-repeat: no-repeat;
   color: var(--silver-color);
@@ -7,9 +7,16 @@
   position: relative;
 }
 
+.hero-banner-outer-container {
+  position: relative;
+  height: 100vh;
+}
+
 .hero-banner__container {
   position: absolute;
   text-align: center;
+  width: 95%;
+  margin: auto;
   left: 50%;
   top: 45%;
   transform: translate(-50%, -50%);
@@ -18,8 +25,6 @@
 .hero-banner__heading {
   font-size: 4rem;
   color: white;
-  position: relative;
-  left: 4px;
 }
 
 .hero-banner__sub-heading {
@@ -69,7 +74,41 @@
   border-radius: 1em;
 }
 
+.disappear-animation {
+  animation: 1s disappear forwards 1 ease;
+}
+
+.appear-animation {
+  animation: 0.7s disappear reverse 1 ease-in;
+}
+
 @keyframes scroll {
   0% {transform: translate(-50%, -20%)}
   100% {opacity: 1; transform: translate(-50%, 10%)}
+}
+
+@keyframes disappear {
+  0% {opacity: 1; transform: translateY(0%)}
+  100% {opacity: 0; transform: translateY(-10%)}
+}
+
+@media (max-width: 550px) {
+  .hero-banner__heading {
+    font-size: 3.2rem;
+  }
+  .hero-banner__sub-heading {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 490px) {
+  .hero-banner {
+    height: 80vh;
+  }
+  .hero-banner-outer-container {
+    height: 80vh;
+  }
+  .scroll-icon {
+    transform: scale(0.7);
+  }
 }
