@@ -203,9 +203,9 @@
     <div class='contact-outer-container'>
       <p class='contact__text'>Fill out the form below to get in contact with me!</p>
       <form class='contact__form'>
-        <input class='contact__form-input' type="text" name="name" placeholder="Enter name">
-        <input class='contact__form-input' type="text" name="email" placeholder="Enter email">
-        <textarea class='contact__form-textarea' type="text" name="message" placeholder="Your message"></textarea>
+        <input class='contact__form-input' id='subject' type="text" name="subject" placeholder="Enter subject">
+        <input class='contact__form-input' id='email' type="email" name="email" placeholder="Enter email">
+        <textarea class='contact__form-textarea' id='text' type="text" name="message" placeholder="Your message"></textarea>
         <button class='btn btn--contact' type="submit">Send Message</button>
       </form>
     </div>
@@ -214,5 +214,26 @@
   <footer>
     <p>Code available on <a class='link' href="https://github.com/jordan1824?tab=repositories" target="_blank">Github</a></p>
   </footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    $('form').on('submit', (e) => {
+      e.preventDefault();
+
+      const subject = $('#subject').val().trim();
+      const email = $('#email').val().trim();
+      const text = $('#text').val().trim();
+
+      const data = {
+        email,
+        subject,
+        text
+      };
+
+      $.post('/email', data, function() {
+        console.log("Server received our data")
+      });
+    });
+  </script>
 </body>
 </html>
