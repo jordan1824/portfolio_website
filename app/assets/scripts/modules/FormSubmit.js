@@ -16,11 +16,11 @@ class FormSubmit {
       let emailValue = this.email.value.trim()
       let textValue = this.text.value.trim()
       if (subjectValue && emailValue && textValue) {
-        // axios.post('/email', {subject: subjectValue, email: emailValue, text: textValue}).then(function() {
-        //   console.log("success")
-        // }).catch(function() {
-        //   console.log("There was an error")
-        // })
+        axios.post('/email', {subject: subjectValue, email: emailValue, text: textValue}).then(function() {
+          console.log("success")
+        }).catch(function() {
+          console.log("There was an error")
+        })
         this.subject.value = ""
         this.email.value = ""
         this.text.value = ""
