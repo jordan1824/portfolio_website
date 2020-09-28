@@ -2,7 +2,8 @@ const express = require("express")
 const sendMail = require("./mail")
 const path = require('path')
 const app = express()
-
+const dotenv = require("dotenv")
+dotenv.config()
 
 app.use(express.urlencoded({extended: false}))
 app.use(express.json())
@@ -22,11 +23,10 @@ app.post('/email', (req, res) => {
   })
 })
 
+app.use(express.static(__dirname + '/docs'))
 
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'views', 'index.html'))
+  res.render('index')
 })
 
-app.listen(3000, () => {
-  console.log("Server started running on port 3000")
-})
+app.listen(process.env.PORT)
