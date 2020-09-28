@@ -44,6 +44,13 @@ class MultipleFadeIn {
 
 new MultipleFadeIn(document.querySelectorAll(".project"), 60)
 
+// Removes #id value in url
+document.querySelectorAll(".nav-btn").forEach(btn => btn.addEventListener("click", () => {
+  setTimeout(function() {
+    window.history.replaceState({}, null, '/')
+  }, 50)
+}))
+
 if (module.hot) {
   module.hot.accept()
 }
