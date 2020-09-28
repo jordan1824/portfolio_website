@@ -1,11 +1,13 @@
 import '../styles/styles.css'
 import HeroBanner from './modules/HeroBanner'
 import FadeIn from './modules/FadeIn'
+import FormSubmit from './modules/FormSubmit'
 
 new HeroBanner()
 new FadeIn(document.querySelector(".about__intro"), 90)
 new FadeIn(document.querySelector(".about__skills-container"), 75)
 new FadeIn(document.querySelector(".contact-outer-container"), 80)
+new FormSubmit()
 
 class MultipleFadeIn {
   constructor(items, appearPoint) {
